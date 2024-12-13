@@ -1,13 +1,18 @@
+import { Link } from 'react-router'
 import type { Route } from './+types/_index'
-import { Welcome } from '../welcome/welcome'
 
 export function meta({}: Route.MetaArgs) {
 	return [
-		{ title: 'New React Router App' },
-		{ name: 'description', content: 'Welcome to React Router!' }
+		{ title: 'Airsoft' },
+		{ name: 'description', content: 'Welcome to Airsoft!' }
 	]
 }
 
 export default function Home() {
-	return <Welcome />
+	return (
+		<main>
+			<h1>Airsoft Naptar</h1>
+			<Link to='/dashboard'>Dashboard</Link>
+		</main>
+	)
 }
