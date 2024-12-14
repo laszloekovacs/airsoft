@@ -4,9 +4,13 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+	@apply bg-white dark:bg-gray-950;
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+	@media (prefers-color-scheme: dark) {
+		color-scheme: dark;
+	}
+}
+
+input {
+	@apply border-2 border-black dark:border-white;
 }
