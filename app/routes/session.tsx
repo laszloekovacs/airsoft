@@ -6,7 +6,8 @@ export default function SignIn() {
 	const signIn = async () => {
 		console.log('sign in')
 		const data = await authClient.signIn.social({
-			provider: 'github'
+			provider: 'github',
+			callbackURL: 'http://localhost:3000'
 		})
 
 		console.log(data)
