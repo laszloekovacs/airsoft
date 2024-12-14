@@ -4,10 +4,12 @@ import { Form } from 'react-router'
 
 export default function SignIn() {
 	const signIn = async () => {
+		console.log('sign in')
 		const data = await authClient.signIn.social({
 			provider: 'github'
-			//callbackUrl: 'http://localhost:3000'
 		})
+
+		console.log(data)
 	}
 
 	return (
