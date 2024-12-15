@@ -3,7 +3,7 @@ import { authClient } from 'lib/auth.client'
 import { auth } from 'lib/auth'
 import { useNavigate } from 'react-router'
 
-export default function SignIn({ loaderData }: Route.ComponentProps) {
+export default function SessonPage({ loaderData }: Route.ComponentProps) {
 	const navigate = useNavigate()
 
 	const signIn = async () => {
