@@ -6,5 +6,7 @@ export async function loader({ request }: Route.LoaderArgs) {
 }
 
 export async function action({ request }: Route.ActionArgs) {
+	// TODO: if the user does not have an account, redirect to onboarding
+
 	return auth.handler(request)
 }
