@@ -12,17 +12,17 @@ export async function loader({ params }: Route.LoaderArgs) {
 		throw new Response('Not Found', { status: 404 })
 	}
 
-	return { result }
+	return { profile: result[0] }
 }
 
 const ProfilePage = ({ loaderData }: Route.ComponentProps) => {
-	const { result } = loaderData
+	const { profile } = loaderData
 	return (
 		<div>
 			<h1>ProfilePage</h1>
-			<pre>{JSON.stringify(result, null, 2)}</pre>
+			<pre>{JSON.stringify(profile, null, 2)}</pre>
 
-			<img src={result[0].image || undefined} alt='profile pic' />
+			<img src={profile.image || undefined} alt='profile pic' />
 		</div>
 	)
 }
