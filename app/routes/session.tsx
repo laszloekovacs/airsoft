@@ -10,7 +10,8 @@ export default function SessonPage({ loaderData }: Route.ComponentProps) {
 		console.log('sign in')
 		const data = await authClient.signIn.social({
 			provider: 'github',
-			callbackURL: 'http://localhost:3000'
+			callbackURL: 'http://localhost:3000',
+			newUserCallbackURL: 'http://localhost:3000/onboarding'
 		})
 
 		console.log(data)
