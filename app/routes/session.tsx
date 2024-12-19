@@ -7,18 +7,14 @@ export default function SessonPage({ loaderData }: Route.ComponentProps) {
 	const navigate = useNavigate()
 
 	const signIn = async () => {
-		console.log('sign in')
 		const data = await authClient.signIn.social({
 			provider: 'github',
 			callbackURL: 'http://localhost:3000',
 			newUserCallbackURL: 'http://localhost:3000/onboarding'
 		})
-
-		console.log(data)
 	}
 
 	const signOut = async () => {
-		console.log('sign out')
 		const data = await authClient.signOut({
 			fetchOptions: {
 				onSuccess: () => {
@@ -26,7 +22,6 @@ export default function SessonPage({ loaderData }: Route.ComponentProps) {
 				}
 			}
 		})
-		console.log(data)
 	}
 
 	return (
